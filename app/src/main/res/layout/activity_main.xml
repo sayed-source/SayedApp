@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="Nama Sekolah: "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/txtNama2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
+        android:text="Kepala Sekolah: "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/txtWewenang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="124dp"
+        android:text="Wewenang: "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNama" />
+    <TextView
+        android:id="@+id/txtAkreditasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="Akreditasi: "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWewenang" />
+    <TextView
+        android:id="@+id/txtEkstrakurikuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="Ekstrakurikuler: "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAkreditasi" />
+
+    <EditText
+        android:id="@+id/editNama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtNama"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/editNama2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtNama2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editNama"
+        app:layout_constraintStart_toEndOf="@+id/txtWewenang"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+        android:layout_marginTop="103dp" android:layout_marginStart="8dp"
+        android:orientation="horizontal" android:id="@+id/radioGroup">
+        <RadioButton
+            android:text="NEGERI" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbNegeri"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <RadioButton
+            android:text="SWASTA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbSwasta"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editNama2"
+        app:layout_constraintStart_toEndOf="@+id/txtAkreditasi"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+        android:layout_marginTop="103dp" android:layout_marginStart="8dp"
+        android:orientation="horizontal" android:id="@+id/radioGroup2">
+        <RadioButton
+            android:text="A" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbA"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <RadioButton
+            android:text="B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbB"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <RadioButton
+            android:text="C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbC"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbFutsal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="24dp"
+        android:text="Futsal"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtEkstrakurikuler"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/cbBasket"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="Basket"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtEkstrakurikuler"
+        app:layout_constraintTop_toBottomOf="@+id/cbFutsal" />
+
+    <CheckBox
+        android:text="Pramuka"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbPramuka"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbBasket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtEkstrakurikuler"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    <CheckBox
+        android:text="Paskibra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbPaskibra"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbPramuka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtEkstrakurikuler"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    <CheckBox
+        android:text="Kaligrafi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbKaligrafi"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbPaskibra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtEkstrakurikuler"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_delete"
+        android:id="@+id/imgButtonCancel"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbKaligrafi"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:id="@+id/imgButtonAdd"
+        app:layout_constraintEnd_toStartOf="@+id/imgButtonCancel"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbKaligrafi"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
